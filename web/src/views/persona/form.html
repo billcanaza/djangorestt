@@ -1,0 +1,51 @@
+
+
+<md-dialog aria-label="Formulario">
+
+
+  <form ng-submit="guardarregistro(items)" name='myformx' accept-charset="utf-8" >
+  <div class="col-lg-12">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Registros</h2>
+      <span flex></span>
+      
+    </div>
+  </md-toolbar>
+
+
+  <md-dialog-content >
+  <md-content layout-padding>
+      <div>
+      <md-input-container flex>
+        <label>Nombre </label>
+        <input ng-model="items.nombre" required>
+      </md-input-container>
+      <md-input-container flex>
+        <label>Apellido </label>
+        <input ng-model="items.apellido" required>
+      </md-input-container>
+      <md-input-container flex>
+        <label>Nacionalidad </label>
+        <input ng-model="items.nacionalidad" required>
+      </md-input-container>
+     
+    </div>
+
+  </md-content>
+
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <md-button type="reset" ng-click="cancelar()">
+    cancelar
+    </md-button>
+    
+    <md-button type="submit"  ng-disabled="!myformx.$valid">
+     aceptar
+    </md-button>
+  
+  </div>
+  </div>
+  </form>
+</md-dialog>

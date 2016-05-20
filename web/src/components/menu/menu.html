@@ -1,0 +1,125 @@
+<!--<div class="list-group" id="">
+  <a class="list-group-item" data-toggle="collapse" href="#uno"><i class="fa fa-tasks fa-2x"></i>Pacientes</a>
+  <a ui-sref="base.doctor" class="list-group-item" data-toggle="collapse" href="#dos"><i class="fa fa-cube fa-2x"></i>Doctores</a>
+  <a ui-sref="base.usuario" class="list-group-item" data-toggle="collapse" href="#tres"><i class="fa fa-cube fa-2x"></i>Usuarios</a>
+</div>-->
+<style>
+  .glyphicon {
+    margin-right: 10px;
+  }
+
+</style>
+<div class="accordion" id="menu">
+  <div class="panel">
+ 
+    <span class="glyphicon glyphicon-bookmark"></span>
+    Persona
+    <a data-toggle="collapse" href="#menu-1" data-parent="#menu"><span class="glyphicon glyphicon-chevron-down pull-right lista-menu"></span></a>
+    <div id="menu-1" class="collapse">
+        <ul>
+          <li>Personas</li>
+          <li>1.2</li>
+          <li>1.3</li>
+        </ul>
+    </div>
+  </div>   
+
+  <div class="panel">
+ 
+    <span class="glyphicon glyphicon-bookmark"></span>
+    Cliente
+    <a data-toggle="collapse" href="#menu-2" data-parent="#menu"><span class="glyphicon glyphicon-chevron-down pull-right lista-menu"></span></a>
+
+    <div id="menu-2" class="collapse">
+        <ul>
+          <li>1.1</li>
+          <li>1.2</li>
+          <li>1.3</li>
+        </ul>
+    </div>
+  </div>
+  <div class="panel">
+ 
+    <span class="glyphicon glyphicon-bookmark"></span>
+    Venta
+    <a data-toggle="collapse" href="#menu-3" data-parent="#menu"><span class="glyphicon glyphicon-chevron-down pull-right lista-menu"></span></a>
+
+    <div id="menu-3" class="collapse">
+        <ul>
+          <li>1.1</li>
+          <li>1.2</li>
+          <li>1.3</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="panel">
+ 
+    <span class="glyphicon glyphicon-bookmark"></span>
+    Usuarios
+    <a data-toggle="collapse" href="#menu-3" data-parent="#menu"><span class="glyphicon glyphicon-chevron-down pull-right lista-menu"></span></a>
+
+    <div id="menu-3" class="collapse">
+        <ul>
+          <li>1.1</li>
+          <li>1.2</li>
+          <li>1.3</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+  <div class="panel">
+ 
+    <span class="glyphicon glyphicon-bookmark"></span>
+    Reportes
+    <a data-toggle="collapse" href="#menu-3" data-parent="#menu"><span class="glyphicon glyphicon-chevron-down pull-right lista-menu"></span></a>
+
+    <div id="menu-3" class="collapse">
+        <ul>
+          <li>1.1</li>
+          <li>1.2</li>
+          <li>1.3</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  $('.lista-menu').on('click', function(){
+
+    var items = $('.lista-menu');
+    var itemActual = this;
+    var cantidadItems = items.length
+    
+    for (var i = 0; i < cantidadItems; i++) {
+      if(itemActual !== items[i]) {
+
+        $(items[i]).removeClass('glyphicon-chevron-up');
+        $(items[i]).addClass('glyphicon-chevron-down');
+      }
+    };
+
+    if($(itemActual).hasClass('glyphicon-chevron-down')) {
+      $(itemActual).removeClass('glyphicon-chevron-down');
+      $(itemActual).addClass('glyphicon-chevron-up');
+    } else {
+      $(itemActual).removeClass('glyphicon-chevron-up');
+      $(itemActual).addClass('glyphicon-chevron-down');
+    }
+
+
+  });
+</script>
+
+
+<!--
+
+ui-sref="base.paciente"
+ui-sref="base.doctor"
+ui-sref="base.usuario"
+-->

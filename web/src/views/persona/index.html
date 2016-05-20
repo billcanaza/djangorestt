@@ -1,0 +1,53 @@
+<div class="row form-group">
+<div class="col-md-3">
+	
+</div>
+<div class="col-md-9">
+
+<md-button ng-click="formulario('')" class="md-raised` md-warn">Nueva Persona</md-button>
+<center>
+<md-input-container flex><label>buscar </label><input ng-model="buscar"></md-input-container> 
+<md-content>
+    <br>
+    <center>
+
+    <h2>REGISTRO DE PERSONAS</h2>
+<div class="container">
+<table class="table">
+	<thead>
+		<tr class="danger">
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>nacionalidad</th>
+			<th>Opciones</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="success" ng-repeat="var in persona | filter:buscar">
+			<td>{{var.id}}</td>
+			<td>{{var.nombre}}</td>
+			<td>{{var.apellido}}</td>
+			<td>{{var.nacionalidad}}</td>
+			
+
+
+			<td> 
+			<md-button class="md-raised md-primary" ng-click="formulario(var)">Editar</md-button>
+      
+      <md-button class="md-raised md-warn" ng-click="eliminar(var)">emlinibar</md-button>
+
+			</td>
+		</tr>
+	</tbody>
+
+
+</table>
+
+ 
+</center>
+
+</md-content>
+</div>
+</div>
